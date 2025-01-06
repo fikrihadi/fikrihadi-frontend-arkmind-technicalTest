@@ -1,50 +1,30 @@
-# React + TypeScript + Vite
+Frontend Setup Instructions
+To set up the frontend of the project, follow these steps:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Install Dependencies
+First, install all the necessary dependencies using npm. Run the following command in your terminal:
 
-Currently, two official plugins are available:
+bash
+Copy code
+npm install
+This will install all required packages listed in the package.json file.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Configure Environment Variables
+Before running the application, make sure to configure your database credentials. These can be set in the .env file located at the root of your project.
 
-## Expanding the ESLint configuration
+Open the .env file and update the following values with your database credentials:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+makefile
+Copy code
+DB_HOST=<your-database-host>
+DB_PORT=<your-database-port>
+DB_USER=<your-database-username>
+DB_PASSWORD=<your-database-password>
+DB_NAME=<your-database-name>
+Start the Application
+Once you've installed the dependencies and configured the environment variables, you can start the development server. Run the following command to launch the frontend application:
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+bash
+Copy code
+npm run dev
+This will start the application on your local development server (usually accessible at http://localhost:5173).

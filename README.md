@@ -1,6 +1,5 @@
 Frontend Setup Instructions 🚀
-Welcome! Here’s a simple guide to get the frontend of the technical test for fikri hadi up and running on your machine.
-
+Welcome! Here’s a simple guide to get the frontend of the technical test for fikri hadi up and running on your machine  
 1.  Install Dependencies 📦
 The first thing you need to do is install the project dependencies. To do this, open your terminal, navigate to the project folder, and run the following command:
 : npm install
